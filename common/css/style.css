@@ -1,60 +1,142 @@
 @charset "UTF-8"
 /*===== NOTES ========
 
-	last-updated: 2022.02.10
+	last-updated: 2022.02.18
 
 	+1: Element
 	+2: Header Area
 	+3: Navigation Area
-	+4: Main Area
-	+5: Footer Area
-	+6: Media Query (max-width:768px)
+	+4: Main Visual
+	+5: Main Area
+	+6: Footer Area
+	+7: Media Query (max-width:768px)
 
 ====================*/
 /* ====================================================
 +1: Element
 ==================================================== */
-*, *:before, *:after {
+ * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box
+          box-sizing: border-box;
 }
-
-html {
-  font-size: 10px;
-  font-family: "メイリオ", "Meiryo", sans-serif;
+body {
+	width: 100%;
+	font-size: 10px;
+	font-family: "メイリオ", "Meiryo", sans-serif;
+	line-height: 1.3;
 }
-
 h2 {
-	font-size: 3.0em;
-
+	font-size: 3em;
 }
-
 ul {
 	list-style: none;
 }
-div.container {
-  width: 1400px;
-  margin: 0 auto;
+figcaption {
+	font-size: 1.9em;
 }
+a {
+	text-decoration: none;
+}
+.section-inner {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
 /* ====================================================
 +2: Header Area
 ====================================================*/
 h1 {
-	position: absolute;
+	margin-top: 46px;
+	margin-left: 14.3%;
+	background-color: red;
 }
-
 
 /* ====================================================
 +3: Navigation Area
 ==================================================== */
+.nav-main {
+	display: flex;
+	justify-content: center;
+	font-size: 1.8em;
+	background-color: blue;
+	padding: 50px;
+}
+.nav-main > li + li {
+	margin-left: 104px;
 
-
-
+}
+.nav-main li img {
+	margin-right: 5px;
+}
+.cloud_down {
+	height: 26px;
+	width: 100%;
+	background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 24, from(red), color-stop(0.49, #fff), color-stop(0.51, rgba(255,255,255,0)), to(rgba(255,255,255,0)));
+	-webkit-background-size: 34px 100%;
+}
 /* ====================================================
-+4: Main Area
++4: Main Visual
 ==================================================== */
+/* .main_visual {
+	position: relative;
+}
+.mainv_cloud_down {
+	height: 26px;
+	width: 100%;
+	background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 24, from(#369A7E), color-stop(0.49, #369A7E), color-stop(0.51, rgba(255,255,255,0)), to(rgba(255,255,255,0)));
+	-webkit-background-size: 34px 100%;
+	position: absolute;
+	top: 0px;
+}*/
+
+
+.newinfo {
+	background-color: #fff;
+	width: 1000px;
+	height: 106px;
+	border-radius: 10px;
+	border: 4px solid #55b75a;
+	display: flex;
+}
+.newinfo h2 {
+  font-size: 1.8em;
+}
+.newinfo_contents li {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.6em;;
+}
+.main_visual img{
+	width: 100vw;
+}
 
 
 /* ====================================================
-+5: Footer Area
++5: Main
+==================================================== */
+.about {
+	background-color: #fff4ea;
+}
+.about > .section-inner {
+	padding: 126px 200px 63px;
+}
+.about .cloud_down {
+	height: 26px;
+	width: 100%;
+	background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 24, from(#fff4ea), color-stop(0.49, #fff4ea), color-stop(0.51, rgba(255,255,255,0)), to(rgba(255,255,255,0)));
+	-webkit-background-size: 34px 100%;
+}
+figure p{
+	
+	display: inline-block;
+	background: #fff;
+	height: 241px;
+	width: 241px;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0px auto;
+}
+
+/* ====================================================
++6: Footer Area
 ==================================================== */
